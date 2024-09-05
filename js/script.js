@@ -23,6 +23,7 @@ const strangeArray = [
   'b is a letter',
   'JavaScript',
 ];
+console.log(strangeArray);
 
 // Función que recibe por parámetro un array y muestra sus elementos en pantalla
 function showList(array) {
@@ -39,4 +40,7 @@ function showList(array) {
 document.addEventListener('DOMContentLoaded', (e) => {
   // Escribe tu solución aquí
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
+  const filterArray = strangeArray.filter((item) => typeof item === 'string');
+  const sortArray = filterArray.sort();
+  showList(sortArray);
 });
